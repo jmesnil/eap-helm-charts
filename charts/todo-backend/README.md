@@ -9,6 +9,7 @@ The Jakarta EE application is at [https://github.com/jboss-developer/jboss-eap-q
 Once the backend is deployed on OpenShift, it can be accessed from the route `todo-backend`.
 This value will be different for every installation of the backend.
 
-We can verify that this application is properly working as a ToDo Backend by running its https://todobackend.com/specs/index.html[specs] on it.
+We can verify that this application is properly working as a ToDo Backend by running its [specs](https://todobackend.com/specs/index.html) on it.
 
-Once all tests passed, we can use the https://todobackend.com/client/index.html[todobackend client] to have a Web application connected to the backend.
+Once all tests passed, we can use the [todobackend client](https://todobackend.com/client/index.html)
+to have a Web application connected to the backend.

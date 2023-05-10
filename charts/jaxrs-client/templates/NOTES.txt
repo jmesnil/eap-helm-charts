@@ -1,0 +1,4 @@
+Once the backend is deployed on OpenShift, it can be accessed from the route created by this chart.
+This value will be different for every installation of the backend.
+
+You must append `/rest/contacts` to the route to access the HTTP endpoint of the application.
