@@ -1,0 +1,35 @@
+The application can be accessed from the route created by this chart on the `/secured` HTTP endpoint
+
+If you attempt to access that URL, you will see "Unauthorized".
+
+To see and manipulate the HTTP headers within the HTTP requests, it is recommended to use a client like `curl` to invoke the servlet.
+
+----
+$ curl -v <route url>/secured
+...
+< HTTP/1.1 401 Unauthorized
+< Connection: keep-alive
+< X-MESSAGE: Please resubmit the request with a username specified using the X-USERNAME and a password specified using the X-PASSWORD header.
+----
+
+This first request shows the client is being prompted to authenticate. The `X-MESSAGE` header is providing additional information as to how the client can achieve this.
+
+The request can now be submitted with the previously added user.
+
+[source,options="nowrap"]
+----
+$ curl -v -v <route url>/secured -H 'X-Username:quickstartUser' -H 'X-Password:quickstartPwd1!'
+...
+> GET /ee-security/secured HTTP/1.1
+> Host: localhost:8080
+> X-Username:quickstartUser
+> X-Password:quickstartPwd1!
+>
+< HTTP/1.1 200 OK
+< Connection: keep-alive
+< Content-Length: 125
+<
+SecuredServlet - doGet()
+Identity as available from SecurityContext 'quickstartUser'
+Identity as available from injection 'quickstartUser'
+----
