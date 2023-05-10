@@ -5,3 +5,6 @@ We can verify that this application is properly working as a ToDo Backend by run
 
 Once all tests passed, we can use the todobackend client to have a Web application connected to the backend: https://todobackend.com/client/index.html
 
+* https://todobackend.com/specs/index.html
+* [https://todobackend.com/specs/index.html](https://todobackend.com/specs/index.html)
+* https://todobackend.com/specs/index.html[https://todobackend.com/specs/index.html]
