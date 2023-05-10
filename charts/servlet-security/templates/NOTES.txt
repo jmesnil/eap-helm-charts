@@ -1,0 +1,6 @@
+The application can be accessed from the route created by this chart.
+
+You will have to authenticate to access the page with the credentials:
+
+* user: `quickstartUser`
+* password: `quickstartPwd1!`
