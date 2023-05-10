@@ -1,4 +1,4 @@
-# Hello World WS with JBoss EAP 8
+# Hello World WS Quickstart with JBoss EAP 8
 
 This Helm chart packages an application with [JBoss EAP 8](https://www.redhat.com/en/technologies/jboss-middleware/application-platform).
 

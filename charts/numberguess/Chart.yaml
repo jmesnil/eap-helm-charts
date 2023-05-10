@@ -2,7 +2,7 @@ apiVersion: v2
 name: eap8-numberguess
 description: Numberguess Quickstart with JBoss EAP 8
 type: application
-version: 1.0.0
+version: 1.0.1
 appVersion: 8.0.0
 
 home: https://github.com/jboss-developer/jboss-eap-quickstarts/
