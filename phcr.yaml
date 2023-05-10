@@ -1,7 +1,7 @@
 apiVersion: helm.openshift.io/v1beta1
 kind: ProjectHelmChartRepository
 metadata:
-  name: jboss-eap-up-and-running
+  name: jboss-eap-quickstarts-charts
 spec:
   connectionConfig:
     url: https://jmesnil.github.io/eap-quickstarts-charts
