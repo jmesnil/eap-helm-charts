@@ -2,7 +2,7 @@ apiVersion: v2
 name: eap8-helloworld
 description: Helloworld Quickstart with JBoss EAP 8
 type: application
-version: 1.0.1
+version: 1.0.2
 appVersion: 8.0.0
 
 home: https://github.com/jboss-developer/jboss-eap-quickstarts/
