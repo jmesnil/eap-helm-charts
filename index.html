@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Helm Charts for JBoss EAP Quickstarts</title>
+  </head>
+
+  <body>
+    <h1>Helm Charts for JBoss EAP Quickstarts</h1>
+
+    <h2>Usage with <code>helm</code></h2>
+
+    <p><a href="https://helm.sh">Helm</a> must be installed to use the charts.  Please refer to
+      Helm's <a href="https://helm.sh/docs">documentation</a> to get started.
+
+    <p>Once Helm has been set up correctly, add the repo as follows:
+
+    <code>
+      <pre>
+helm repo add jboss-eap-helm-charts https://jmesnil.github.io/eap-helm-charts
+      </pre>
+    </code>
+
+    <p>If you had already added this repo earlier, run <code>helm repo update</code> to retrieve
+      the latest versions of the packages.  You can then run <code>helm search repo jboss-eap-helm-charts</code>
+      to see the charts.
+    
+    <p>To install the <code>&lt;chart-name&gt;</code> chart:
+
+    <code>
+      <pre>
+helm install my-&lt;chart-name&gt; jboss-eap-helm-charts/&lt;chart-name&gt;
+      </pre>
+    </code>
+    
+    <p>To uninstall the chart:
+    
+      <code>
+        <pre>
+helm delete my-&lt;chart-name&gt;  
+        </pre>
+      </code>
+
+    <h2>Integration with OpenShift Web Console</h2>
+
+    <p>The repo can be added to the OpenShift Web Console as a <code>ProjectHelmChartRepository</code> resource to install its charts
+    from the OpenShift Web Console.</p>
+
+    <p>The resource definition is:
+
+    <code>
+      <pre>
+apiVersion: helm.openshift.io/v1beta1
+kind: ProjectHelmChartRepository
+metadata:
+  name: jboss-eap-up-and-running
+spec:
+  connectionConfig:
+    url: https://jmesnil.github.io/eap-quickstarts-charts
+  name: Quickstarts for JBoss EAP
+  description: >-
+    This Helm Chart repository contains Helm Charts to deploy JBoss EAP
+    quickstarts on OpenShift        
+      </pre>
+    </code>
+
+    <p>You can add it to OpenShift Web Console by pasting it as a new YAML resource or by running the command:</p>
+
+    <code>
+      <pre>
+        oc apply -f https://jmesnil.github.io/eap-helm-charts/phcr.yaml
+      </pre>
+    </code>
+    </body>
+</html>

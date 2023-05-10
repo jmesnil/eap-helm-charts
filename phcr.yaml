@@ -1,0 +1,11 @@
+apiVersion: helm.openshift.io/v1beta1
+kind: ProjectHelmChartRepository
+metadata:
+  name: jboss-eap-up-and-running
+spec:
+  connectionConfig:
+    url: https://jmesnil.github.io/eap-quickstarts-charts
+  name: Quickstarts for JBoss EAP
+  description: >-
+    This Helm Chart repository contains Helm Charts to deploy JBoss EAP
+    quickstarts on OpenShift   
