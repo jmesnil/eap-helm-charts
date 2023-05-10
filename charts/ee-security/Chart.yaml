@@ -1,8 +1,8 @@
 apiVersion: v2
 name: eap8-ee-security
-description: CMEE Security Quickstart with JBoss EAP 8
+description: EE Security Quickstart with JBoss EAP 8
 type: application
-version: 1.0.2
+version: 1.0.3
 appVersion: 8.0.0
 
 home: https://github.com/jboss-developer/jboss-eap-quickstarts/
